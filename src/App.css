@@ -40,3 +40,79 @@
 .read-the-docs {
   color: #888;
 }
+
+
+/* Style the button container */
+.btn {
+  display: flex;
+  gap: 1rem; /* Space between buttons */
+  justify-content: center;
+}
+
+/* Style the buttons */
+.btn button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+/* Specific styles for each button */
+.btn button:nth-child(1) {
+  /* Increment button */
+  background-color: #28a745;
+  color: white;
+}
+
+.btn button:nth-child(2) {
+  /* Decrement button */
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn button:nth-child(3) {
+  /* Reset button */
+  background-color: #007bff;
+  color: white;
+}
+
+/* Hover effects */
+.btn button:hover {
+  filter: brightness(90%);
+  transform: translateY(-2px);
+}
+
+/* Active effects */
+.btn button:active {
+  transform: translateY(0);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  h5 {
+    font-size: 1.5rem;
+  }
+
+  .btn button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+  }
+
+  h5 {
+    color: #e0e0e0;
+  }
+
+  .btn button {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+}
